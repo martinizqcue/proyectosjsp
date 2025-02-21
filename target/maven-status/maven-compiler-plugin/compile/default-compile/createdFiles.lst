@@ -1,0 +1,16 @@
+com\mycompany\proyectojsphibernate\resources\JakartaEE8Resource.class
+DAO\ProyectosDAOImpl.class
+servlets\svLogin.class
+entities\Proyectos.class
+hibernateUtil\hibernateUtil.class
+DAO\TareasDAO.class
+servlets\svProyectos.class
+DAO\ProyectosDAO.class
+DAO\UsuariosDAO.class
+com\mycompany\proyectojsphibernate\JakartaRestConfiguration.class
+servlets\svUsuarios.class
+entities\Usuarios.class
+servlets\svTareas.class
+DAO\TareasDAOImpl.class
+entities\Tareas.class
+DAO\UsuariosDAOImpl.class

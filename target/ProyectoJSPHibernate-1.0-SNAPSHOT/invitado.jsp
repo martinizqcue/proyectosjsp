@@ -18,6 +18,8 @@
         <form action="logout.jsp" method="post">
             <button type="submit">Cerrar Sesión</button>
         </form>
+        
+        
     </body>
 </html>
 

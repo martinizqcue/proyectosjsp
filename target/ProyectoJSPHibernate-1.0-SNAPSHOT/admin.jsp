@@ -4,6 +4,7 @@
 <html>
     <head>
         <title>Admin - Opciones</title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
     <body>
         <h2>Bienvenido Admin</h2>
@@ -16,7 +17,7 @@
             <li><a href="eliminarTarea.jsp">Eliminar Tarea</a></li>
             <li><a href="eliminarProyecto.jsp">Eliminar Proyecto</a></li>
         </ul>
-        
+        <br>
         <!-- Botón de Cerrar Sesión -->
         <form action="logout.jsp" method="post">
             <button type="submit">Cerrar Sesión</button>

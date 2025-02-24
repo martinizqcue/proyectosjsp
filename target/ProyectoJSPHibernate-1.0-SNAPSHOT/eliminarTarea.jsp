@@ -3,6 +3,7 @@
 <html>
 <head>
     <title>Eliminar Tarea</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
     <h2>Eliminar Tarea</h2>

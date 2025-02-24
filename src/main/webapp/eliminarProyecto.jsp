@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Eliminar Proyecto</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
     

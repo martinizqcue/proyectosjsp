@@ -6,6 +6,7 @@
 <html>
     <head>
         <title>Lista de Proyectos</title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
     <body>
         <h2>Lista de Proyectos</h2>
@@ -52,15 +53,25 @@
                 </c:forEach>
             </tbody>
         </table>
-        
+        <br>
         <!-- Botón de Cerrar Sesión -->
         <form action="logout.jsp" method="post">
             <button type="submit">Cerrar Sesión</button>
         </form>
-        
-        <!-- Botón para volver a admin.jsp -->
-        <a href="admin.jsp" style="display:inline-block; padding:10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px;">Volver a Admin</a>
-    
+        <br>
+        <!-- Botón para volver a la página correspondiente -->
+        <c:choose>
+            <c:when test="${sessionScope.role == 'admin'}">
+                <a href="admin.jsp" style="display:inline-block; padding:10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px;">Volver a Admin</a>
+            </c:when>
+            <c:when test="${sessionScope.role == 'invitado'}">
+                <a href="invitado.jsp" style="display:inline-block; padding:10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px;">Volver a Invitado</a>
+            </c:when>
+            <c:otherwise>
+                <a href="index.jsp" style="display:inline-block; padding:10px 20px; background-color: #FF5733; color: white; text-align: center; text-decoration: none; border-radius: 5px;">Volver al Inicio</a>
+            </c:otherwise>
+        </c:choose>
+
         
     </body>
 </html>

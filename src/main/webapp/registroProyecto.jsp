@@ -6,6 +6,7 @@
 <html>
     <head>
         <title>Registrar Proyecto</title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
     <body>
         <h2>Formulario de Registro de Proyecto</h2>
@@ -34,17 +35,24 @@
 
             <input type="submit" value="Registrar Proyecto">
         </form>
-
+        <br>
         <!-- Botón de Cerrar Sesión -->
         <form action="logout.jsp" method="post">
             <button type="submit">Cerrar Sesión</button>
         </form>
-        <!-- Botón para volver a admin.jsp -->
-        <a href="admin.jsp" style="display:inline-block; padding:10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px;">Volver a Admin</a>
-    
-        <!-- Botón para volver a admin.jsp 
-        <form action="admin.jsp">
-            <button type="submit" style="padding:10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px;">Volver a Admin</button>
-        </form>-->
+        
+       <br>
+        <!-- Botón para volver a la página correspondiente -->
+        <c:choose>
+            <c:when test="${sessionScope.role == 'admin'}">
+                <a href="admin.jsp" style="display:inline-block; padding:10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px;">Volver a Admin</a>
+            </c:when>
+            <c:when test="${sessionScope.role == 'invitado'}">
+                <a href="invitado.jsp" style="display:inline-block; padding:10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px;">Volver a Invitado</a>
+            </c:when>
+            <c:otherwise>
+                <a href="index.jsp" style="display:inline-block; padding:10px 20px; background-color: #FF5733; color: white; text-align: center; text-decoration: none; border-radius: 5px;">Volver al Inicio</a>
+            </c:otherwise>
+        </c:choose>
     </body>
 </html>
